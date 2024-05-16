@@ -2,24 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Test</title>
+    <title>Super Simple Weather</title>
     <link rel="stylesheet" type="text/css" href="/css/output.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <div class="w-screen bg-red-800 text-center">
-      <p>Hello</p>
+    <div class="text-center my-12">
+      <h1 class="text-4xl font-bold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Super Simple Weather App</h1>
     </div>
-    <div class="container">
+    <div class="flex justify-center">
       <fieldset>
         <form action="/" method="POST">
-          <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
-          <input type="submit" class="ghost-button" value="Get Weather">
+          <div class="flex rounded-lg shadow-sm">
+            <input type="text" id="hs-trailing-button-add-on" name="city" class="py-3 px-4 block w-full border-gray-200 shadow-sm rounded-s-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Enter a City" required>
+            <input type="submit" class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-e-md border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" value="Get Weather">
+          </div>
         </form>
-        <% if(weather !== null){ %>
-          <p><%= weather %></p>
+        <% if(weather != null){ %>
+          <p><%= weather.name %></p>
         <% } %>
-        <% if(error !== null){ %>
+        <% if(error != null){ %>
           <p><%= error %></p>
         <% } %>
       </fieldset>
