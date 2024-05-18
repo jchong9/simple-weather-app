@@ -3,9 +3,11 @@ A very generic weather application that shows users real-time weather data of th
 
 ## Usage
 1. Simply clone the git repo
+
 ```https://github.com/jchong9/simple-weather-app.git```
 
 2. Run the main file on localhost:3000
+
 ```node app.js```
 
 3. Go to localhost:3000 on your preferred web browser
