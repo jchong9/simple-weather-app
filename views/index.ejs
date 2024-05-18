@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="/css/output.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
   </head>
-  <body>
+  <body class="bg-gray-200">
     <div class="text-center my-12">
       <h1 class="text-4xl font-bold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Super Simple Weather App</h1>
     </div>
@@ -18,14 +18,35 @@
             <input type="submit" class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-e-md border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" value="Get Weather">
           </div>
         </form>
-        <% if(weather != null){ %>
-          <div class="my-12 p-5 bg-red-500">
+        <% if (weather != null){ %>
+          <div class="my-12 p-5 bg-gray-300 rounded-lg text-center">
+            <% if (weather.id >= 200 && weather.id < 300){ %>
+              <h1 class="text-8xl my-5">🌩</h1>
+            <% } %>
+            <% if (weather.id >= 300 && weather.id < 400){ %>
+              <h1 class="text-8xl my-5">🌦️</h1>
+            <% } %>
+            <% if (weather.id >= 500 && weather.id < 600){ %>
+              <h1 class="text-8xl my-5">🌧</h1>
+            <% } %>
+            <% if (weather.id >= 600 && weather.id < 700){ %>
+              <h1 class="text-8xl my-5">❄️</h1>
+            <% } %>
+            <% if (weather.id >= 700 && weather.id < 800){ %>
+              <h1 class="text-8xl my-5">🌫</h1>
+            <% } %>
+            <% if (weather.id == 800){ %>
+              <h1 class="text-8xl my-5">☀️</h1>
+            <% } %>
+            <% if (weather.id > 800){ %>
+            <h1 class="text-8xl my-5">☁️</h1>
+            <% } %>
             <h2 class="text-4xl font-bold dark:text-white"><%= weather.name %></h2>
             <h3 class="text-2xl font-bold dark:text-white"><%= weather.main.temp %>°</h2>
             <h4>Feels like <%= weather.main.feels_like %>°</p>
           </div>
         <% } %>
-        <% if(error != null){ %>
+        <% if (error != null){ %>
           <p><%= error %></p>
         <% } %>
       </fieldset>
