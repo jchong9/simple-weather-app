@@ -14,6 +14,7 @@ A very generic weather application that shows users real-time weather data of th
 
 ## Technologies
 - Node.js
+- Express Framework
 - [Tailwind 3.4.3](https://tailwindcss.com/docs/installation)
 
 ## Acknowledgements
