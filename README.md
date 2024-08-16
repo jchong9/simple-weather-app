@@ -6,11 +6,15 @@ A very generic weather application that shows users real-time weather data of th
 
 ```https://github.com/jchong9/simple-weather-app.git```
 
-2. Run the main file on localhost:3000
+2. In ```app.js```, change the variable, apiKey, to your own API key from OpenWeather API
+
+
+
+3. Run the main file on localhost:3000 (NOTE: You must have npm installed)
 
 ```node app.js```
 
-3. Go to localhost:3000 on your preferred web browser
+4. Go to localhost:3000 on your preferred web browser
 
 ## Technologies
 - Node.js
